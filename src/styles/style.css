@@ -1,0 +1,133 @@
+/* Палитры цветов */
+/* https://coolors.co/4f000b-720026-ce4257-ff7f51-ff9b54 */
+/* https://coolors.co/palette/cdb4db-ffc8dd-ffafcc-bde0fe-a2d2ff */
+/* https://coolors.co/palette/ffe5ec-ffc2d1-ffb3c6-ff8fab-fb6f92 */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: auto;
+  display: flex;
+  place-items: center;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  max-width: 414px;
+  height: 100vh;
+  background-color: #380007;
+  color: #FF9B54;
+}
+
+a,
+button,
+ol,
+ul {
+  all: unset;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.scores {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.score {
+  font-weight: 700;
+  font-size: 52px;
+}
+
+#high-score {
+  opacity: 0.6;
+  display: none;
+}
+
+.game-border-1 {
+  border: #720026 solid 8px;
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 10px #720026;
+}
+
+.game-border-2 {
+  border: #FF7F51 solid 6px;
+  border-radius: 26px;
+  box-shadow: inset 0 0 0 10px #FF7F51;
+}
+
+.game-border-3 {
+  border: #CE4257 solid 18px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 5px #CE4257;
+  background-color: #FFBE8F;
+}
+
+#game-board {
+  border-radius: 100px;
+  display: grid;
+  grid-template-columns: repeat(20, 16px);
+  grid-template-rows: repeat(20, 16px);
+  margin: 5px;
+}
+
+.buttons {
+  padding: 0 24px;
+  margin-top: 32px;
+  font-size: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.btn {
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  border-radius: 16px;
+  border: #CE4257 solid 3px;
+  color: #FFBE8F;
+  background-color: #720026;
+  transition: transform 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+#btn-left {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+#btn-right {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+#btn-up {
+  grid-column: 2/ 3;
+  grid-row: 1 / 2;
+}
+
+#btn-down {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
